@@ -1,42 +1,11 @@
-language {
-  :oo => {
-    :ruby => {
-      :type => "interpreted"
-    },
-    :javascript => {
-      :type => "interpreted"
-    },
-    :python => {
-      :type => "interpreted"
-    },
-    :java => {
-      :type => "compiled"
-    }
-  },
-  :functional => {
-    :clojure => {
-      :type => "compiled"
-    },
-    :erlang => {
-      :type => "compiled"
-    },
-    :scala => {
-      :type => "compiled"
-    },
-    :javascript => {
-      :type => "interpreted"
-    }
- 
-  }
-}
-
 def reformat_languages(languages)
   new_hash = {}
-  languages.each do |oo_functional, category_hash|
-    category_hash.each do |language, type|
+
+  languages.each do |language, language_hash|
+    language_hash.each do |oof, oof_hash|
+      oof_hash.each do |script, script_hash|
+        new_hash << script{script_hash, :style => oof}
+      end
+    end
   end
 end
-
-
-
-reformat_languages(languages)
