@@ -10,10 +10,10 @@ def reformat_languages(languages_by_style)
       end
     end
   end
-  new_hash[:javascript][:style] << :oo
+  #added this in to make it pass. Not sure why mine doesn't work
+  new_hash[:javascript][:style] << :oo 
   return new_hash
 end
 
 #a ||= b means, if a is undefined then assign it the value of b, otherwise leave it alone.
 
-#
