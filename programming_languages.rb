@@ -8,6 +8,7 @@ def reformat_languages(languages_by_style)
          new_hash[language] = {key => value, style => [oof]}
        else
          new_hash[language][:style] << oof
+       end
       end
     end
   end
