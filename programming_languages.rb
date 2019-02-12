@@ -6,11 +6,14 @@ def reformat_languages(languages_by_style)
       language_hash.each do |key, value|
         new_hash[language] = {key => value}
         new_hash[language][:style] ||= []
-        new_hash[language][:style].push(oof)
+        new_hash[language][:style] << (oof)
       end
     end
   end
+  
   return new_hash
 end
 
 #a ||= b means, if a is undefined then assign it the value of b, otherwise leave it alone.
+
+#
