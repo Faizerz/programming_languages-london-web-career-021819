@@ -4,7 +4,9 @@ def reformat_languages(languages)
   languages.each do |language, language_hash|
     language_hash.each do |oof, oof_hash|
       oof_hash.each do |script, script_hash|
-        new_hash << script{script_hash, :style => oof}
+        script_hash.each do |type_hash|
+          new_hash[script] = {type_hash, :style => [oof]}
+        end
       end
     end
   end
